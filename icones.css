@@ -1,10 +1,10 @@
 @font-face {
     font-family: "fontsite";
-    src: url("../fonts/fontsite.eot?lp9mju");
-    src: url("../fonts/fontsite.eot?lp9mju#iefix") format("embedded-opentype"),
-        url("../fonts/fontsite.ttf?lp9mju") format("truetype"),
-        url("../fonts/fontsite.woff?lp9mju") format("woff"),
-        url("../fonts/fontsite.svg?lp9mju#fontsite") format("svg");
+    src: url("./fonts/fontsite.eot?lp9mju");
+    src: url("./fonts/fontsite.eot?lp9mju#iefix") format("embedded-opentype"),
+        url("./fonts/fontsite.ttf?lp9mju") format("truetype"),
+        url("./fonts/fontsite.woff?lp9mju") format("woff"),
+        url("./fonts/fontsite.svg?lp9mju#fontsite") format("svg");
     font-weight: normal;
     font-style: normal;
     font-display: block;

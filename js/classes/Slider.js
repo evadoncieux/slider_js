@@ -3,7 +3,6 @@
 class Slider {
   constructor(params) {
     this.imageData = params.images;
-    // console.log(images)
     this.area = document.querySelector(params.area);
     this.currentIndex = 0;
 
@@ -11,7 +10,6 @@ class Slider {
     this.sliderHeight = params.height;
 
     this.createSlider();
-
   }
 
   createSlider() {
@@ -30,18 +28,18 @@ class Slider {
 
     const prevButton = document.createElement('button');
     prevButton.classList.add("prev");
+    prevButton.innerHTML = '<i class="icon-previous"></i>';
     prevButton.addEventListener('click', () => this.prevImage());
-    this.area.appendChild(prevButton);
-
-    this.area.appendChild(this.slider);
-
+    this.slider.appendChild(prevButton);
+    
     const nextButton = document.createElement('button');
     nextButton.classList.add("next");
+    nextButton.innerHTML = '<i class="icon-next"></i>';
+
     nextButton.addEventListener('click', () => this.nextImage());
-    this.area.appendChild(nextButton);
-
-
-
+    this.slider.appendChild(nextButton);
+    
+    this.area.appendChild(this.slider);
   }
 
   prevImage() {
