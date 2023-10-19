@@ -1,3 +1,4 @@
+import Autoplay from "./classes/Autoplay.js";
 import Slider from "./classes/Slider.js";
 
 const images = [
@@ -16,4 +17,7 @@ const params = {
     height:'100%' //optionel
 }
 
-const slider = new Slider(params);
+// const slider = new Slider(params);
+
+const autoSlider = new Autoplay(params, 2);
+console.log(autoSlider);
