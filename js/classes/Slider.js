@@ -21,9 +21,9 @@ class Slider {
         document.body.appendChild(slider);
         slider.classList.add('slider');
 
-        slider.style.width = this.width;
-        slider.style.height = this.height;
-        
+        slider.style.width = this.params.width;
+        slider.style.height = this.params.height;
+
 
         this.slider = slider;
     }
