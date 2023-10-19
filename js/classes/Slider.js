@@ -1,37 +1,40 @@
-'use strict';
+"use strict";
 
 class Slider {
-    constructor(params) {
-        // this._params.images = images;
-        // this._params.area = area;
-        // this._params.width = width;
-        // this._params.height = height;
-        this._params = {
-            images: images,
-            area: 'div.slider', //Selecteur CSS
-            width:'100%', //optionel
-            height:'100%' //optionel
-        }
+  constructor(params) {
+    this.images = params.images;
+    this.area = document.querySelector(params.area);
+    this.currentIndex = 0;
 
-        this.domObject = document.createElement('div');
-    }
+    this.sliderWidth = params.width;
+    this.sliderHeight = params.height;
 
-    createSlider() {
-        const slider = document.createElement('div');
-        document.body.appendChild(slider);
-        slider.classList.add('slider');
-
-        slider.style.width = this.params.width;
-        slider.style.height = this.params.height;
+    this.createSlider();
 
 
-        this.slider = slider;
-    }
+  }
 
+  createSlider() {
+    this.slider = document.createElement('div');
+    this.slider.classList.add("slider");
+
+    this.slider.style.width = this.sliderWidth;
+    this.slider.style.height = this.sliderHeight;
+
+    this.images = document.createElement('img');
+    this.area.appendChild(this.slider);
+
+    const prevButton = document.createElement('button');
+    this.area.appendChild(prevButton);
+
+    const nextButton = document.createElement('button');
+    this.area.appendChild(nextButton);
+
+
+
+    this.area.appendChild(this.slider);
+
+  }
 }
-
-
-
-
 
 export default Slider;
