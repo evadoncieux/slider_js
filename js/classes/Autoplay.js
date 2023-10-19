@@ -7,23 +7,26 @@ class Autoplay extends Slider {
 
     constructor(params, delay) {
         super(params);
-        this._delay = delay * 1000;
+        this._delay = delay;
         this.idEvent = null;
     }
     // ajouter le bouton play qui lance/arrête le diapo
 
     createSlider() {
+
+        super.createSlider();
+
         const playButton = document.createElement('button');
         playButton.classList.add("play");
         playButton.innerHTML = '<i class="icon-play"></i>';
         playButton.addEventListener('click', () => this.playSlider());
-        super.slider.appendChild(playButton);
+        this.slider.appendChild(playButton);
 
         const pauseButton = document.createElement('button');
         pauseButton.classList.add("play");
-        pauseButton.innerHTML = '<i class="icon-play"></i>';
+        pauseButton.innerHTML = '<i class="icon-pause"></i>';
         pauseButton.addEventListener('click', () => this.pauseSlider());
-        super.slider.appendChild(pauseButton);
+        this.slider.appendChild(pauseButton);
     }
 
     playSlider() {
