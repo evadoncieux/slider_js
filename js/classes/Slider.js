@@ -16,7 +16,7 @@ class Slider {
 
   createSlider() {
     this.slider = document.createElement('div');
-    this.slider.classList.add("slider");
+    this.slider.classList.add("slider-content");
 
     this.slider.style.width = this.sliderWidth;
     this.slider.style.height = this.sliderHeight;
@@ -29,14 +29,18 @@ class Slider {
     this.area.appendChild(this.slider);
 
     const prevButton = document.createElement('button');
+    prevButton.classList.add("prev");
     prevButton.addEventListener('click', () => this.prevImage());
     this.area.appendChild(prevButton);
 
+    this.area.appendChild(this.slider);
+
     const nextButton = document.createElement('button');
+    nextButton.classList.add("next");
     nextButton.addEventListener('click', () => this.nextImage());
     this.area.appendChild(nextButton);
 
-    this.area.appendChild(this.slider);
+
 
   }
 

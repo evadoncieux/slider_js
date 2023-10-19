@@ -24,7 +24,7 @@ main {
 
 div.slider-content button {
     position: absolute;
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 0, 0, 0.8);
     border-radius: 50%;
     width: 2em;
     height: 2em;
@@ -36,7 +36,7 @@ div.slider-content button {
 
 div.slider-content {
     position: relative;
-    background-color: black;
+    /* background-color: black; */
 }
 
 div.slider-content img {
@@ -64,7 +64,6 @@ button.next {
     right: 10px;
     z-index: 500;
     top: 45%;
-    
 }
 
 button.prev {
@@ -73,7 +72,7 @@ button.prev {
     top: 45%;
 }
 
-button.rand {
+/* button.rand {
     left: 10px;
     z-index: 500;
     top: 10px;
@@ -89,7 +88,7 @@ button.play {
     color: #000;
     z-index: 500;
     background: rgba(255, 255, 255, .8);
-}
+} */
 
 div.error {
     background: rgba(255,0,0,0.7);
