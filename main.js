@@ -1,1 +1,0 @@
-// doit être exportable en module
